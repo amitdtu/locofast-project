@@ -76,10 +76,10 @@ export default class  CardDetails extends React.Component{
         </Modal.Header>
         <Modal.Body>
           <div className="row">
-            <div className="col-12 col-lg-4 image">
+            <div className="col-12 col-lg-3 image">
               <img className="img-fluid" src={img3} alt=""/>
             </div>
-            <div className="col-12 col-lg-8 left-content pl-lg-5">
+            <div className="col-12 col-lg-9 left-content pl-lg-5">
               <h3 className="d-flex align-items-center">
                 <Arrow />
                 <span className="ml-3">Assign to factory</span>

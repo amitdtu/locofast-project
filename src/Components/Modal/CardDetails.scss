@@ -25,10 +25,10 @@
         }
     }
 
-    img{
-        height: 390px;
-        width: 330px;
-    }
+    // img{
+    //     height: 250px;
+    //     width: 200px;
+    // }
 
     .left-content{
         h3{
@@ -54,18 +54,28 @@
     .card-details-modal {
         &.modal-lg, &.modal-xl{
             max-height: 700px;
-            max-width: 90vw;
+            max-width: 80vw;
         }
+
+        // .image{
+        //     img{
+        //         height: 390px;
+        //         width: 330px;
+        //     }
+        // }
     }
 }
 
 @media (min-width: 360px ) and (max-width: 992px) {
     .card-details-modal {
+        .modal-header{
+            .modal-title{
+                text-align: center;
+            }
+        }
         .image{
             text-align: center;
             img{
-                height: 250px;
-                width: 200px;
                 margin-bottom: 2rem;
             }
         }
