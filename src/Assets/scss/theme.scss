@@ -1,0 +1,128 @@
+
+// If we want the same design  of select menu, custom select menu and file upload all over the project then we should write those code in theme.scss
+
+%error-border{
+    border: 1px solid #dc3545;
+}
+
+// select
+.select__indicator-separator{
+    display: none;
+}
+
+.basic-single{
+    .select__option--is-focused{
+        background-color: #F2F2F2;
+    }
+    .select__option--is-selected{
+        background-color: #2684ffe3;
+    }
+}
+
+// basic custom
+.basic-single-custom{
+    .select__menu {
+        z-index: 10;
+        .select__menu-list{
+            height: 32vh;
+        }
+    }
+    .custom-option{
+        display: flex;
+        padding: 0.25rem 0.5rem;
+        img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        .details{
+            margin-left: 1rem;
+            .text{
+                font-size: 1rem;
+                font-weight: 400;
+            }
+            .sub-text{
+                font-size: 0.75rem;
+                font-weight: 400;
+                color: #676773;
+            }
+        }
+        p{
+            margin: 0;
+        }
+
+        &.focused{
+            background-color: #F2F2F2;
+        }
+        &.selected{
+            background-color: #2684ff33;
+        }
+    }
+}
+
+.basic-single, .basic-single-custom{
+    &.error-border {
+        .select__control {
+            @extend %error-border
+        }
+    }
+}
+
+
+.custom-file-upload{
+    .custom-file-input{
+        cursor: pointer;
+    }
+    .custom-file-label{
+        border: 2px dashed #ced4da;
+        color: black;
+    }
+    
+    .custom-file-label::after{
+        position: absolute;
+        top: 20%;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        display: block;
+        height: calc(1.5em + .75rem);
+        padding: .375rem .75rem;
+        line-height: 1.5;
+        content: ""  !important;
+        background-color: inherit ;
+        border-left: none ;
+        border-radius: unset ;
+        background: url('../../Assets/images/attach_file.svg') no-repeat;
+    }
+
+    label {
+        &.error-border{
+            border-color: #dc3545;
+        }
+    }
+
+}
+.file-uploaded{
+    padding: 0.5rem;
+    background: #F2F2F2;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+// input
+input {
+    &.error-border{
+        @extend %error-border
+    }
+    &:focus{
+        box-shadow: none;
+    }
+}
+
+.color-blue{
+    color: #0067E2;
+}
+
